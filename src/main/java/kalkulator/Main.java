@@ -11,11 +11,11 @@ public class Main {
         Scanner user_input = new Scanner(System.in);
         boolean Running = true;
         boolean first_time = true;
-        int variable1,variable2,choice;
+        double variable1,variable2,choice;
         while (Running == true){
             if (first_time == true){
                 System.out.println("Insert the first integer: ");
-                variable1 = user_input.nextInt();
+                variable1 = user_input.nextDouble();
             }
             else{
                 
@@ -23,7 +23,7 @@ public class Main {
                 System.out.println("Your first integer is: "+variable1);
             }
             System.out.println("Insert the second integer: ");
-            variable2 = user_input.nextInt();
+            variable2 = user_input.nextDouble();
             System.out.println("1 - Add, 2 - Substract, 3 - Multiply, 4 - Divide");
             choice = user_input.nextInt();
             Calc.setState(variable1);

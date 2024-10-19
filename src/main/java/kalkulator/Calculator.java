@@ -1,29 +1,29 @@
 package kalkulator;
 
 public class Calculator {
-	private int state = 0;
+	private double state = 0;
 
-	public int getState() {
+	public double getState() {
 		return state;
 	}
 
-	public void setState(int state) {
+	public void setState(double state) {
 		this.state = state;
 	}
 
-	public void add(int value){
+	public void add(double value){
 		state += value;
 	}
 
-	public void substract(int value){
+	public void substract(double value){
 		state -= value;
 	}
 
-	public void mult(int value){
+	public void mult(double value){
 		state *= value;
 	}
 
-	public void divide(int value){
+	public void divide(double value){
 		if (value != 0) {
 			state /= value;
 		}
