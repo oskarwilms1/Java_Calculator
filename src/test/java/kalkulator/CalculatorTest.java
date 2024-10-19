@@ -25,19 +25,33 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testAddition(){
+	public void testPositiveAddition(){
 		Calculator sut = new Calculator();
-		sut.setState(50);
-		sut.add(1034);
-		assertEquals(1084,sut.getState(),0.0001);
+		sut.setState(Double.MAX_VALUE);
+		sut.add(Double.MAX_VALUE);
+		assertEquals(Double.POSITIVE_INFINITY,sut.getState(),0.0001);
+	}
+	@Test
+	public void testNegativeAddition(){
+		Calculator sut = new Calculator();
+		sut.setState(-Double.MAX_VALUE);
+		sut.add(-Double.MAX_VALUE);
+		assertEquals(Double.NEGATIVE_INFINITY,sut.getState(),0.0001);
 	}
 
 	@Test
-	public void testMultiplication(){
+	public void testPositiveMultiplication(){
 		Calculator sut = new Calculator();
-		sut.setState(31);
-		sut.mult(1762);
-		assertEquals(54622,sut.getState(),0.0001);
+		sut.setState(Double.MAX_VALUE);
+		sut.mult(Double.MAX_VALUE);
+		assertEquals(Double.POSITIVE_INFINITY,sut.getState(),0.0001);
+	}
+	@Test
+	public void testNegativeMultiplication(){
+		Calculator sut = new Calculator();
+		sut.setState(-Double.MAX_VALUE);
+		sut.mult(Double.MAX_VALUE);
+		assertEquals(Double.NEGATIVE_INFINITY,sut.getState(),0.0001);
 	}
 
 	@Test
